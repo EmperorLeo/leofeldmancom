@@ -13,3 +13,101 @@
  *= require_tree .
  *= require_self
  */
+#nav-bar li {
+  float: left;
+}
+
+#nav-bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: absolute;
+  bottom: 0;
+}
+
+#nav-bar li a {
+  display: block;
+  color: red;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: cursive;
+}
+
+#nav-bar li a:hover {
+  background-color: #111;
+  color: white
+}
+
+#body-container {
+  position: relative;
+}
+
+#side-bar {
+  border: 1px solid black;
+  padding: 10px;
+  margin-top: 25px;
+  height: 1000px;
+  /*position: absolute;*/
+}
+
+#inner-container {
+  position: absolute;
+  margin: 25px;
+}
+
+#side-bar tr td {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 20px;
+  padding: 0px 5px;
+  color: white;
+  text-align: center;
+}
+
+/*#side-bar tr td:nth-child(even) {
+  text-align: center;
+}*/
+
+#side-bar tr:nth-child(odd) {
+  background-color: #3D4656;
+}
+
+#side-bar tr:nth-child(even) {
+  background-color: #5D8A79;
+}
+
+.website-header {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  height: 10em;
+  position: relative;
+}
+
+.header-wrapper {
+  background-color: #333;
+  height: 10em;
+}
+
+.website-header h1 {
+  font-size: 3em;
+  color: red;
+}
+
+.website-header h2 {
+  font-size: 2em;
+  color: red;
+}
+
+.inline {
+  display: inline-block;
+}
+
+/*.nav-bar-container {
+  top: 0;
+  bottom: 0;
+  position: relative;
+}*/

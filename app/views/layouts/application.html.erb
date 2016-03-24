@@ -1,14 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MySite</title>
+  <title>Leo Feldman - The Defiant Man</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<header>
+  <div class ="header-wrapper">
+    <div class="website-header">
+      <div>
+      <h1>Leo Feldman</h1>
+      <h2>The Defiant Man</h3>
+      </div>
+    </div>
+    <div class="website-header nav-bar-container" style="float: right;">
+      <ul id="nav-bar">
+        <li><a href="">Home</a></li>
+        <li><a href="">Blog</a></li>
+        <li><a href="">Politics</a></li>
+        <li><a href="">Video Games</a></li>
+        <li><a href="">Projects</a></li>
+        <li><a href="">Cute Anime Girls</a></li>
+        <li><a href="">Recipies</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
 
+<div id="body-container">
+
+  <div class="side-bar-container inline">
+    <table id="side-bar">
+      <tr>
+        <td>Facebook:</td>
+        <td><a href="http://facebook.com/feldmanleo">Profile Page</a></td>
+      </tr>
+      <tr>
+        <td>Github:</td>
+        <td><a href="https://github.com/EmperorLeo">Profile Page</a></td>
+      </tr>
+      <tr>
+        <td>League of Legends:</td>
+        <td>Feldmonster (NA)</td>
+      </tr>
+      <tr>
+        <td>Battle.net Account:</td>
+        <td>Feldmonster#1795 (NA)</td>
+      </tr>
+      <tr>
+        <td>Current Employment:</td>
+        <td>Unemployed</td>
+      </tr>
+      <tr>
+        <td>Email:</td>
+        <td><a href="mailto://laf22@duke.edu">laf22@duke.edu</a></td>
+      </tr>
+      <tr>
+        <td>Phone Number:</td>
+        <td><a href="tel:18285828411">828-582-8411</a></td>
+      </tr>
+      <tr>
+        <td>Skype:</td>
+        <td>Emporerleolion (yeah, I know, I was 13)</td>
+      </tr>
+      <tr>
+        <td>Birthday:</td>
+        <td>June 8, 1994 (I rue the day)</td>
+      </tr>
+      <tr>
+        <td>Directive:</td>
+        <td>Destroy, Destroy, Destroy</td>
+      </tr>
+
+    </table>
+  </div>
+  <div class="inline" id="inner-container">
+    <%= yield %>
+  </div>
+
+</div>
 </body>
 </html>

@@ -6,4 +6,8 @@ class ApplicationController < ActionController::Base
   def hello
     render text: "Hello, Moshe."
   end
+
+  def index
+    render template: "pages/main"
+  end
 end
