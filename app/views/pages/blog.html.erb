@@ -1,1 +1,13 @@
-<h3>Welcome to my blog!</h3>
+<h3 id="welcome-text">Welcome to my blog!</h3>
+
+<ul id="blog-list">
+<% @posts.each do |post| %>
+  <li class="blog-square-wrapper">
+  <div class="blog-square">
+    <h1><%= post.title %></h1>
+    <h2>Posted: <%= post.created_at.strftime("%d %b. %Y %H:%M") %></h2>
+    <div class="content-wrapper"><%= simple_format(post.content) %><div>
+  </div>
+  </li>
+<% end %>
+</ul>

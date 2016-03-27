@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  party: MyString
+  office: MyString
+  like: MyText
+  hate: MyText
+  scared: 1
+  image_link: MyString
+
+two:
+  name: MyString
+  party: MyString
+  office: MyString
+  like: MyText
+  hate: MyText
+  scared: 1
+  image_link: MyString

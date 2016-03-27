@@ -1,5 +1,7 @@
 class BlogPostController < ApplicationController
 
+  #ADMIN Functions
+
   def list
     @posts = BlogPost.all
     render 'admin/blogs/list'
@@ -50,6 +52,13 @@ class BlogPostController < ApplicationController
 
   def blog_post_param
     params.require(:blog_post).permit(:title, :content)
+  end
+
+  #WEBSITE Functions
+
+  def renderBlogs
+    @posts = BlogPost.all
+    render 'pages/blog'
   end
 
 end

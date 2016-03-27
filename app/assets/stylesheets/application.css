@@ -13,6 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background: url('background-img.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 #nav-bar li {
   float: left;
 }
@@ -33,7 +41,7 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1.5em;
   font-family: cursive;
 }
 
@@ -122,6 +130,12 @@
   top: 0;
   left: 0;
   right: 0;
+}
+
+.title-wrapper {
+  position: relative;
+  top: 33%;
+  transform: translateY(-50%);
 }
 
 .website-header h1 {

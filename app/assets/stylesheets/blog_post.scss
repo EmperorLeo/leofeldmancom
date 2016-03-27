@@ -1,3 +1,41 @@
 // Place all the styles related to the BlogPost controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@font-face {
+  font-family: "Locksmith Regular";
+  src: url(/assets/fonts/LockSmith_reg.otf) format("truetype");
+}
+
+#blog-list {
+  padding: 0;
+}
+
+.blog-square-wrapper {
+  list-style-type: none;
+  margin: 4em 0;
+}
+
+.blog-square {
+  border: 1px solid red;
+  box-shadow: 10px 10px 5px #441013;
+  padding: 10px;
+  background-color: #9EA6A4;
+}
+
+.blog-square h1 {
+  text-align: center;
+  text-shadow: 5px 5px 5px #555555;
+}
+
+.blog-square h2 {
+  color: #2f4f4f;
+  font-size: 12px;
+  text-align: center;
+  text-shadow: 3px 3px 10px #000000;
+}
+
+.content-wrapper p {
+  font-family: "Locksmith Regular";
+  font-size: 20px;
+}

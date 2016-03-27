@@ -11,11 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160326064919) do
+ActiveRecord::Schema.define(version: 20160327103139) do
 
   create_table "blog_posts", force: :cascade do |t|
     t.string   "title"
     t.text     "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "politicians", force: :cascade do |t|
+    t.string   "name"
+    t.string   "party"
+    t.string   "office"
+    t.text     "like"
+    t.text     "hate"
+    t.integer  "scared"
+    t.string   "image_link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -63,9 +63,8 @@ Rails.application.routes.draw do
   get 'admin/blog_post/delete' => 'blog_post#delete'
   get 'admin/blog_post/update' => 'blog_post#update'
 
-
-  get "/admin/blogs" => "admin#renderBlogs"
-
-  get "/pages/:page" => "pages#show"
+  get 'pages/blog' => "blog_post#renderBlogs"
+  get 'pages/politics' => "politician#renderPolitics"
+  # get "/pages/:page" => "pages#show"
 
 end
