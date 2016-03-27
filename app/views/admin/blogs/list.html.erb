@@ -1,0 +1,12 @@
+<% if @posts.blank? %>
+<p>No posts</p>
+<% else %>
+<h1>POSTS</h1>
+<ul>
+  <% @posts.each do |p| %>
+    <li><%= link_to p.title, {:action => 'show', :id => p.id} %> <%= link_to "EDIT", {:action => 'edit', :id => p.id} %>
+    <%= link_to "DELETE", {:action => 'delete', :id => p.id} %></li>
+  <% end %>
+</ul>
+<% end %>
+<p><%= link_to "Add new blog post", {:action => 'new'} %></p>

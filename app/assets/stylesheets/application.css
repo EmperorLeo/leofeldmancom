@@ -44,6 +44,7 @@
 
 #body-container {
   position: relative;
+  margin-top: 10em;
 }
 
 #side-bar {
@@ -51,7 +52,32 @@
   padding: 10px;
   margin-top: 25px;
   height: 1000px;
+  background-color: #B9B7A7;
   /*position: absolute;*/
+}
+
+#side-bar a {
+  text-decoration: none;
+  text-shadow: 2px 2px 8px #FFFFF0;
+  color: white;
+}
+
+#side-bar a:link {
+
+}
+
+#side-bar a:hover {
+  font-weight: bold;
+  text-shadow: 3px 3px 10px #010101;
+  background-color: inherit;
+}
+
+#side-bar a:active {
+  font-weight: bolder;
+}
+
+#side-bar a:visited {
+  color: white;
 }
 
 #inner-container {
@@ -90,6 +116,12 @@
 .header-wrapper {
   background-color: #333;
   height: 10em;
+  position: fixed;
+  width: 100%;
+  z-index: 500;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .website-header h1 {

@@ -1,0 +1,8 @@
+<h1>Edit blog post</h1>
+<%= form_for @post, :url => {:action => "update", :id => @post} do |f| %>
+  <p>Title: <%= f.text_field 'title' %></p>
+  <p>Body: <%= f.text_area 'content' %></p>
+  <%= f.submit "Save changes" %>
+<% end %>
+
+<%= link_to "Back", {:action => 'list'} %>

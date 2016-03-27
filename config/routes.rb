@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :posts
+  # resources :admin/blog_post
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -45,7 +45,7 @@ Rails.application.routes.draw do
   #   concern :toggleable do
   #     post 'toggle'
   #   end
-  #   resources :posts, concerns: :toggleable
+  #   resources :admin/blog_post, concerns: :toggleable
   #   resources :photos, concerns: :toggleable
 
   # Example resource route within a namespace:
@@ -54,8 +54,18 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  Rails.application.routes.draw do
-    get "/pages/:page" => "pages#show"
-  end
+  get 'admin/blog_post/list' => 'blog_post#list'
+  get 'admin/blog_post/new' => 'blog_post#new'
+  post 'admin/blog_post/create' => 'blog_post#create'
+  patch 'admin/blog_post/update' => 'blog_post#update'
+  get 'admin/blog_post/show' => 'blog_post#show'
+  get 'admin/blog_post/edit' => 'blog_post#edit'
+  get 'admin/blog_post/delete' => 'blog_post#delete'
+  get 'admin/blog_post/update' => 'blog_post#update'
+
+
+  get "/admin/blogs" => "admin#renderBlogs"
+
+  get "/pages/:page" => "pages#show"
 
 end
