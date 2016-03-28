@@ -1,4 +1,4 @@
-
+<div id="admin-wrapper">
 <h1>Add new post</h1>
 <%= form_tag :action => 'create' do %>
 <p><label for = "post_title">Title</label>:
@@ -8,3 +8,4 @@
 <%= submit_tag "Create" %>
 <% end -%>
 <%= link_to 'Back', {:action => 'list'} %>
+</div>

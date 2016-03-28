@@ -1,0 +1,14 @@
+<div id="admin-wrapper">
+<% if @politicians.blank? %>
+<p>No politicians</p>
+<% else %>
+<h1>POLITICIANS</h1>
+<ul>
+  <% @politicians.each do |p| %>
+    <li><%= link_to p.name, {:action => 'show', :id => p.id} %> <%= link_to "EDIT", {:action => 'edit', :id => p.id} %>
+    <%= link_to "DELETE", {:action => 'delete', :id => p.id} %></li>
+  <% end %>
+</ul>
+<% end %>
+<p><%= link_to "Add new politician", {:action => 'new'} %></p>
+</div>

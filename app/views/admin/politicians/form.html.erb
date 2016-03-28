@@ -1,0 +1,22 @@
+<div id="admin-wrapper">
+<h1>Add new politician</h1>
+<%= form_tag :action => 'create' do %>
+<p><label for = "politician_name">Name</label>:
+<%= text_field 'politicians', 'name' %></p>
+<p><label for = "politician_party">Party</label>:
+<%= text_field 'politicians', 'party' %></p>
+<p><label for = "politician_office">Office</label>:
+<%= text_field 'politicians', 'office' %></p>
+<p><label for = "politician_like">Like</label>:
+<%= text_area 'politicians', 'like' %></p>
+<p><label for = "politician_hate">Hate</label>:
+<%= text_area 'politicians', 'hate' %></p>
+<p><label for = "politician_scared">Scared</label>:
+<%= text_field 'politicians', 'scared' %></p>
+<p><label for = "politician_image_link">Image_link</label>:
+<%= text_field 'politicians', 'image_link' %></p>
+
+<%= submit_tag "Create" %>
+<% end -%>
+<%= link_to 'Back', {:action => 'list'} %>
+</div>

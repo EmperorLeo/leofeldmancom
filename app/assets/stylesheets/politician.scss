@@ -1,3 +1,54 @@
 // Place all the styles related to the politician controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#politician-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.politician-block-wrapper {
+  margin-bottom: 70px;
+}
+
+.politician-block {
+  border: 1px solid red;
+  box-shadow: 10px 10px 5px #441013;
+}
+
+.politician-block table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+.politician-block img {
+  height: 150px;
+  width: auto;
+}
+
+.polit-img-row {
+  background-color: black;
+}
+
+.politician-block tr {
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #9EA6A4;
+}
+
+.politician-block td {
+  border-bottom: 1px solid black;
+}
+
+.politician-block td:nth-child(odd) {
+  width: 25%;
+  font-weight: bold;
+}
+
+.politician-block td:nth-child(even) {
+  width: 75%;
+}
+
+.politician-block p {
+
+}

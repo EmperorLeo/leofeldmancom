@@ -1,0 +1,13 @@
+<div id="admin-wrapper">
+<h1><%= @politician.name %></h1>
+<ul>
+  <li><%= @politician.party %></li>
+  <li><%= @politician.office %></li>
+  <li><%= simple_format(@politician.like) %></li>
+  <li><%= simple_format(@politician.hate) %></li>
+  <li><%= @politician.scared %></li>
+  <li><%= @politician.image_link %></li>
+</ul>
+
+<%= link_to 'Back', {:action => 'list'} %>
+</div>

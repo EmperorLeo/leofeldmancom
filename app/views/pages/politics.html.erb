@@ -1,0 +1,30 @@
+<p id="welcome-text">Here, I have arranged an assortment of politicians and how I feel about them.
+They are sorted in order of politicians I am least worried about to those I am most worried about.
+You should be able to tell that I am a strong progressive from this list!</p>
+
+<ul id="politician-list">
+  <% @politicians.each do |politician| %>
+    <% isRepub=politician.party.include? "Republican" %>
+    <% isDem=politician.party.include? "Democratic" %>
+    <% if isRepub %>
+      <% color="#941C2F" %>
+    <% elsif isDem %>
+      <% color="#084C61" %>
+    <% else %>
+      <% color="#717562" %>
+    <% end %>
+    <li class="politician-block-wrapper">
+    <div class="politician-block" style="background-color: <%= color %>;">
+    <table>
+      <tr class="polit-img-row"><td></td><td><img src="<%= politician.image_link %>"></img></td></tr>
+      <tr><td>Name</td><td><strong><%= politician.name %></strong></td></tr>
+      <tr><td>Party</td><td><%= politician.party %></td></tr>
+      <tr><td>Office</td><td><%= politician.office %></td></tr>
+      <tr><td>What do I like?</td><td><%= simple_format(politician.like) %></td></tr>
+      <tr><td>What do I hate?</td><td><%= simple_format(politician.hate) %></td></tr>
+      <tr><td>How scared am I of <%= politician.name %>?</td><td><%= politician.scared %> / 100</td></tr>
+    </table>
+    </div>
+    </li>
+  <% end %>
+</ul>

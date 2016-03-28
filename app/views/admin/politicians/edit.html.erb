@@ -1,0 +1,17 @@
+<div id="admin-wrapper">
+<h1>Edit blog post</h1>
+<%= form_for @politician, :url => {:action => "update", :id => @politician} do |f| %>
+  <p>Name: <%= f.text_field 'name' %></p>
+  <p>Party: <%= f.text_field 'party' %></p>
+  <p>Office: <%= f.text_field 'office' %></p>
+  <p>Like: <%= f.text_area 'like' %></p>
+  <p>Hate: <%= f.text_area 'hate' %></p>
+  <p>Scared (1-100): <%= f.text_field 'scared' %></p>
+  <p>Image: <%= f.text_field 'image_link' %></p>
+
+
+  <%= f.submit "Save changes" %>
+<% end %>
+
+<%= link_to "Back", {:action => 'list'} %>
+</div>
