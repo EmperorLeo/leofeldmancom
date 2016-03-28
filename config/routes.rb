@@ -61,7 +61,6 @@ Rails.application.routes.draw do
   get 'admin/blog_post/show' => 'blog_post#show'
   get 'admin/blog_post/edit' => 'blog_post#edit'
   get 'admin/blog_post/delete' => 'blog_post#delete'
-  get 'admin/blog_post/update' => 'blog_post#update'
 
   get 'admin/politicians/list' => 'politician#list'
   get 'admin/politicians/new' => 'politician#new'
@@ -70,7 +69,6 @@ Rails.application.routes.draw do
   get 'admin/politicians/show' => 'politician#show'
   get 'admin/politicians/edit' => 'politician#edit'
   get 'admin/politicians/delete' => 'politician#delete'
-  get 'admin/politicians/update' => 'politician#update'
 
   get 'pages/blog' => "blog_post#renderBlogs"
   get 'pages/politics' => "politician#renderPolitics"
