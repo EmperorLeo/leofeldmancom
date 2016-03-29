@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users, only: [:update]
   # resources :admin/blog_post
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -70,8 +71,8 @@ Rails.application.routes.draw do
   get 'admin/politicians/edit' => 'politician#edit'
   get 'admin/politicians/delete' => 'politician#delete'
 
-  get 'pages/blog' => "blog_post#renderBlogs"
-  get 'pages/politics' => "politician#renderPolitics"
+  get 'pages/blog' => "pages#renderBlogs"
+  get 'pages/politics' => "pages#renderPolitics"
   # get "/pages/:page" => "pages#show"
 
 end

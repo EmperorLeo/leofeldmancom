@@ -23,12 +23,20 @@
         <li><a href="/pages/politics">Politics</a></li>
         <li><a href="">Video Games</a></li>
         <li><a href="">Projects</a></li>
-        <li><a href="">Cute Anime Girls</a></li>
+        <!-- <li><a href="">Cute Anime Girls</a></li> -->
         <li><a href="">Recipies</a></li>
+        <!-- <% if current_user %>
+        <li>
+            Admin: <strong><%= current_user.admin? %></strong><br>
+            <%= link_to 'Toggle admin rights', user_path(current_user), method: :patch, class: 'btn btn-info' %>
+        </li>
+        <% end %> -->
+
       </ul>
     </div>
   </div>
 </header>
+
 
 <div id="body-container">
 
@@ -78,6 +86,11 @@
     </table>
   </div>
   <div class="inline" id="inner-container">
+    <div id="flash">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+    </div>
     <%= yield %>
   </div>
 
