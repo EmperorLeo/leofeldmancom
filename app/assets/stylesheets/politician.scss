@@ -38,17 +38,24 @@
 
 .politician-block td {
   border-bottom: 1px solid black;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  line-height: 30px;
 }
 
 .politician-block td:nth-child(odd) {
   width: 25%;
   font-weight: bold;
+  font-size: 20pt;
+  padding-left: 10px;
 }
 
 .politician-block td:nth-child(even) {
   width: 75%;
+  font-size: 18pt;
 }
 
 .politician-block p {
-
+  font-size: 18pt;
+  line-height: inherit;
 }
