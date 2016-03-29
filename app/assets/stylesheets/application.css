@@ -113,6 +113,14 @@ body {
   background-color: #5D8A79;
 }
 
+#side-bar td:nth-child(odd) {
+  width: 100px;
+}
+
+#side-bar td:nth-child(even) {
+  width: 200px;
+}
+
 .website-header {
   display: inline-block;
   width: 50%;
